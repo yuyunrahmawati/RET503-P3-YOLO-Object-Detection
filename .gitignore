@@ -1,0 +1,19 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ultralytics & YOLO Caches
+*.cache
+runs/predict/
+runs/detect/*/weights/last.pt
+
+# Temporary / OS Files
+.DS_Store
+Thumbs.db
+hasil_balik/

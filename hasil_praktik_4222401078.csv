@@ -1,0 +1,5 @@
+eksperimen,perubahan,map50,map50_95,precision,recall,latency_ms,duration_min
+E1_pretrained,-,0.8111,0.5175,0.8151,0.8250,13.17,2.73
+E2_scratch,-,0.0061,0.0020,0.0031,0.5750,13.79,2.81
+E3_tuning,imgsz=640,0.9097,0.5708,0.9169,0.9250,29.31,6.42
+TEST_E3_tuning,test_split,0.7014,0.4032,0.7625,0.8000,-,-

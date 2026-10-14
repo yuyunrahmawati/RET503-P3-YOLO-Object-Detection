@@ -1,0 +1,10 @@
+  NIM / Nama    : 4222401078 / Yuyun Rahmawati
+  Waktu         : 2026-10-15 03:42:00
+  Komputer      : NEKO-TECH (Intel64 Family 6 Model 151 Stepping 2, GenuineIntel) (Device: cpu)
+  Dataset       : dataset_v1  (sidik jari label: 492f7b41f3b3)
+  Eksperimen     Perubahan   mAP50   mAP50-95  P      R      ms    menit
+  E1_pretrained  -           0.811   0.518     0.815  0.825  13.2  2.7  
+  E2_scratch     -           0.006   0.002     0.003  0.575  13.8  2.8  
+  E3_tuning      imgsz=640   0.910   0.571     0.917  0.925  29.3  6.4  
+  Model terpilih (mAP50-95 val tertinggi): E3_tuning
+  Hasil di data TEST (sekali saja)       : mAP50=0.701, mAP50-95=0.403, P=0.763, R=0.800

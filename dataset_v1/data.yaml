@@ -1,0 +1,10 @@
+# Konfigurasi Dataset Deteksi Objek Box Industri RET503
+path: C:/Users/LENOVO/OneDrive/Documents/.TUGAS C5/Computer Vision and Deep LearningRET503/P3-YOLO/dataset_v1
+train: images/train
+val: images/val
+test: images/test
+
+nc: 2
+names:
+  0: box_cokelat
+  1: box_merah
