@@ -22,7 +22,7 @@ Repositori ini memuat seluruh artefak kode, pipeline preparasi dataset (format Y
 
 ---
 
-## 🗂️ Struktur Direktori Repositori
+## Struktur Direktori Repositori
 
 ```text
 RET503-P3-YOLO-Object-Detection/
@@ -72,7 +72,7 @@ RET503-P3-YOLO-Object-Detection/
 
 ---
 
-## 📦 2. Preparasi & Manajemen Dataset (Tahap 1 & 2 - Slide 5-7, 15)
+## 2. Preparasi & Manajemen Dataset (Tahap 1 & 2 - Slide 5-7, 15)
 
 Data diambil langsung dari proyek `RET503-P2-Transfer-Learning-MobileNetV2` dengan total **200 citra**:
 - 100 citra `box_cokelat` (resolusi 832 * 464)
@@ -103,7 +103,7 @@ Dataset dibagi menggunakan skema *chronological temporal split* untuk mencegah k
 
 ---
 
-## 🚀 3. Eksperimen Pelatihan & Komparasi YOLO (Tahap 3–5 - Slide 36-37)
+## 3. Eksperimen Pelatihan & Komparasi YOLO (Tahap 3–5 - Slide 36-37)
 
 Pelatihan dijalankan menggunakan arsitektur **YOLO11n** (2,59 juta parameter) melalui skrip otomatis `06_latih_bandingkan.py` dengan parameter terkontrol (10 epoch, batch size 16, seed 42):
 
@@ -139,7 +139,7 @@ Berikut adalah tabel keluaran resmi yang dicatat oleh program `06_latih_bandingk
 
 ---
 
-## 🧠 5. Analisis Evaluasi & Pembahasan Ilmiah (Slide 30–31, 38)
+## 5. Analisis Evaluasi & Pembahasan Ilmiah (Slide 30–31, 38)
 
 ### 1. Bukti Manfaat Transfer Learning (E1 vs E2)
 - **E1_pretrained** mencapai **mAP50 = 81.1%** dan **mAP50-95 = 51.8%** dalam 10 epoch.
