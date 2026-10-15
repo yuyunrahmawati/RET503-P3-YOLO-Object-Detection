@@ -1,5 +1,5 @@
 # Deteksi Objek Box Industri pada Robot Visi Menggunakan YOLO
-## Praktik Terpadu Minggu 4–7: Dari Data ke Model YOLO (RET503)
+## Praktik Minggu 4–7: Dari Data ke Model YOLO (RET503)
 
 [![Course](https://img.shields.io/badge/Course-RET503%20Computer%20Vision%20%26%20Deep%20Learning-blue.svg)](https://polibatam.ac.id)
 [![Institution](https://img.shields.io/badge/Politeknik%20Negeri%20Batam-Teknologi%20Rekayasa%20Robotika-orange.svg)](https://polibatam.ac.id)
