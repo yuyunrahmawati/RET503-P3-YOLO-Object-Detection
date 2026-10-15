@@ -66,7 +66,7 @@ RET503-P3-YOLO-Object-Detection/
    - `1: box_merah` (Kotak boks merah industri)
 4. **Unit Komputasi:** Laptop / Edge Computer Robotika (Intel Core i5-12450HX CPU & NVIDIA GeForce RTX 3050 Laptop GPU).
 5. **Target Kinerja & Latensi (Budget):**
-   - Target akurasi:mAP50≥90%.
+   - Target akurasi: mAP50 ≥ 90%.
    - Target kecepatan inferensi: ≥15 FPS (anggaran latensi ≤67 ms)
    - Model yang efisien dan ringan untuk *embedded edge devices* (arsitektur nano≤3 M parameter).
 
