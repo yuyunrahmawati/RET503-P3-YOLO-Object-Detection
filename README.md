@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Identitas Mahasiswa & Ringkasan Proyek
+## Identitas Mahasiswa & Ringkasan Proyek
 
 - **Nama Mahasiswa :** Yuyun Rahmawati
 - **NIM :** 4222401078
@@ -57,7 +57,7 @@ RET503-P3-YOLO-Object-Detection/
 
 ---
 
-## 🎯 1. Rancangan Sistem Persepsi (CDIO Stage #2 Design - Slide 32)
+## 1. Rancangan Sistem Persepsi (Slide 32)
 
 1. **Misi Proyek:** Sistem visi bertugas mengenali posisi (*bounding box*) dan mengklasifikasikan jenis boks industri secara *real-time* untuk memandu lengan robot manipulator pemilah (*sorting arm*).
 2. **Kamera & Posisi:** Kamera monokular RGB terpasang pada dudukan *top-down / angled* dengan jarak kerja 30–80 cm di atas konveyor atau meja perakitan.
@@ -66,25 +66,25 @@ RET503-P3-YOLO-Object-Detection/
    - `1: box_merah` (Kotak boks merah industri)
 4. **Unit Komputasi:** Laptop / Edge Computer Robotika (Intel Core i5-12450HX CPU & NVIDIA GeForce RTX 3050 Laptop GPU).
 5. **Target Kinerja & Latensi (Budget):**
-   - Target akurasi: $\text{mAP50} \ge 90\%$.
-   - Target kecepatan inferensi: $\ge 15\text{ FPS}$ (anggaran latensi $\le 67\text{ ms}$).
-   - Model yang efisien dan ringan untuk *embedded edge devices* (arsitektur nano $\le 3\text{ M}$ parameter).
+   - Target akurasi:mAP50≥90%.
+   - Target kecepatan inferensi: ≥15 FPS (anggaran latensi ≤67 ms)
+   - Model yang efisien dan ringan untuk *embedded edge devices* (arsitektur nano≤3 M parameter).
 
 ---
 
 ## 📦 2. Preparasi & Manajemen Dataset (Tahap 1 & 2 - Slide 5-7, 15)
 
 Data diambil langsung dari proyek `RET503-P2-Transfer-Learning-MobileNetV2` dengan total **200 citra**:
-- 100 citra `box_cokelat` (resolusi $832 \times 464$)
-- 100 citra `box_merah` (resolusi $1280 \times 720$)
+- 100 citra `box_cokelat` (resolusi 832 * 464)
+- 100 citra `box_merah` (resolusi 1280 * 720)
 
 ### A. Dua Format Anotasi (Slide 5)
 1. **Format YOLO (`dataset_yolo/labels/*.txt`):**
    Setiap citra memiliki file `.txt` bernama sama dengan isi per baris:
-   $$\text{class\_id}\quad c_x\quad c_y\quad w\quad h$$
-   Koordinat dinormalisasi dalam rentang $[0, 1]$ terhadap dimensi citra.
+   class_id cx ​cy ​w h
+   Koordinat dinormalisasi dalam rentang [0, 1] terhadap dimensi citra.
 2. **Format COCO (`dataset_yolo/annotations_coco.json`):**
-   Seluruh dataset tersimpan dalam satu file JSON terstruktur dengan koordinat piksel $[x_{\min}, y_{\min}, w, h]$ pojok kiri atas.
+   Seluruh dataset tersimpan dalam satu file JSON terstruktur dengan koordinat piksel [xmin​,ymin​,w,h] pojok kiri atas.
 
 ### B. Validasi & Konversi Dua Arah (Slide 35)
 - `01_cek_anotasi.py`: Berhasil memverifikasi 200/200 file label tanpa ada koordinat di luar bidang citra atau format salah (tingkat kelulusan 100%).
@@ -116,7 +116,7 @@ Pelatihan dijalankan menggunakan arsitektur **YOLO11n** (2,59 juta parameter) me
 
 ---
 
-## 📊 4. Keluaran Resmi Program (Format Slide 37)
+## 4. Keluaran Resmi Program (Format Slide 37)
 
 Berikut adalah tabel keluaran resmi yang dicatat oleh program `06_latih_bandingkan.py` dan tersimpan di [`hasil_praktik_4222401078.txt`](hasil_praktik_4222401078.txt):
 
@@ -157,20 +157,20 @@ Berikut adalah tabel keluaran resmi yang dicatat oleh program `06_latih_bandingk
 ### 3. Pengujian Model Terpilih pada Data TEST (Slide 31)
 - Model terpilih **E3_tuning** diuji satu kali (*single evaluation*) pada subset `test` (20 citra independen).
 - Hasil pengujian data test:
-  - $\text{mAP50} = 0.701$ ($70.1\%$)
-  - $\text{mAP50-95} = 0.403$ ($40.3\%$)
-  - $\text{Precision} = 0.763$ ($76.3\%$)
-  - $\text{Recall} = 0.800$ ($80.0\%$)
+  - mAP50 = 0,701 (70,1%)
+  - mAP50-95 = 0.403 (40.3%)
+  - Precision = 0.763 (76.3%)
+  - Recall = 0.800 (80.0%)
 - Performa data test sedikit lebih rendah dari data val karena subset test diambil dari segmen video paling akhir dengan sudut orientasi ekstrim, membuktikan pengujian dilakukan secara jujur dan bebas dari manipulasi pemilihan data berulang.
 
 ### 4. Evaluasi Latensi & Throughput Robot
 - Waktu inferensi model terbaik (`E3_tuning`) adalah **29.3 ms per citra** pada CPU (setara **~34.1 FPS**).
 - Pada mode baseline (`E1_pretrained`), latensi adalah **13.2 ms per citra** (setara **~75.7 FPS**).
-- Kedua model berada jauh di bawah ambang batas anggaran latensi sistem robot ($\le 67\text{ ms}$ / target $\ge 15\text{ FPS}$).
+- Kedua model berada jauh di bawah ambang batas anggaran latensi sistem robot (≤67 ms / target ≥15 FPS).
 
 ---
 
-## 💻 6. Panduan Menjalankan Program (Step-by-Step)
+## 6. Panduan Menjalankan Program (Step-by-Step)
 
 ### Langkah 1: Persiapan Environment
 Gunakan virtual environment Python dengan dependensi `ultralytics`, `torch`, `opencv-python`, dan `matplotlib`:
@@ -217,7 +217,7 @@ python predict.py dataset_v1/images/test/box_merah__frame_000005491.jpg
 python predict.py dataset_v1/images/test/box_cokelat__frame_000003725.jpg
 ```
 
-Contoh Output Inferensi:
+Output Inferensi:
 ```text
 ============================================================
  INFERENSI DETEKSI OBJEK YOLO (ROBOT VISI RET503)
